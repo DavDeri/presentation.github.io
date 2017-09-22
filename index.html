@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8"/>
+    <title>Sécuriser les applications web : pourquoi ? comment ? | by David Derigent</title>
+
+    <meta name="author" content="David Derigent"/>
+    <link href="css/classic-slides.css" rel="stylesheet"/>
+
+</head>
+<body class="impress-not-supported">
+<div class="fallback-message">
+    <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified
+        version of this presentation.</p>
+    <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+</div>
+
+
+<div id="impress" data-transition-duration="1000">
+
+    <div id="overview" class="step" data-x="3000" data-y="1500" data-z="-1" data-scale="10"
+         style="pointer-events: none;">
+        <img src="images/2330946464_788bec934a_o.jpg" alt="Large tree" width="1600"
+             style="position: inherit; top: -700px; left: -200px"/>
+    </div>
+
+    <div id="copyright" class="step skip" data-x="-3500" data-y="5600" data-scale="2">
+        <p> Presentation: (C) David Derigent, 2017. <a href="https://creativecommons.org/licenses/by/4.0/">CreativeCommons
+            Attribution License</a>.</p>
+    </div>
+
+    <div class="step title" data-x="-1000" data-y="4000" data-scale="3.5" id="title">
+        <h1>Sécuriser les applications web : pourquoi ? comment ?</h1>
+        <h2>David Dérigent<br/>Référent sécurité applicative à Open Groupe<br/>
+            12-09-2017</h2>
+    </div>
+
+    <div class="step" data-rel-x="2200" data-rel-y="600" data-rel-z="-10" data-rotate-y="180" id="d_derigent">
+        <img src="images/David_Derigent_portrait_L.png"
+             align="right"/>
+        <img src="images/javaee.png" width="224" height="225"
+             style="position: inherit; top: 11px; left: 60px"/>
+        <img src="images/big-data.png" width="316" height="160"
+             style="position: inherit; top: 240px; left: 410px"/>
+        <img src="images/security.png" width="263" height="191"
+             style="position: inherit; top: 250px; left: 20px"/>
+        <p style="position: inherit; top: 550px; left: 510px">
+            <a href="mailto:david.derigent@open-groupe.com">david.derigent@open-groupe.com</a></p>
+    </div>
+
+
+    <div class="step" data-x="1000" data-y="5500" data-z="0" data-rotate-y="0" data-scale="1"
+         id="bd">
+        <img src="images/Strip-La-sécurité-après-tout-2.jpg" width="">
+    </div>
+
+    <div class="step" data-x="5000" data-y="5500" data-z="0" data-rotate-y="0" data-scale="1"
+         id="topics">
+        <h1>Sécuriser les applications web :</h1>
+        <ul>
+            <li>Quelques chiffres et faits récents</li>
+            <li>Risques et impacts pour les entreprises</li>
+            <li>Hacker est devenu accessible à tous</li>
+            <li>Gérer la sécurité applicative sur vos projets</li>
+        </ul>
+    </div>
+
+    <div class="step title" id="initialsync" data-rel-x="1500" data-rel-y="-100" data-scale="0.7">
+        <h1>Quelques chiffres et faits récents</h1>
+    </div>
+
+    <div class="step" style="text-align: center" data-rel-x="500" data-rel-y="-300" data-scale="0.8">
+        <h1>Orange 2014</h1>
+        <p>En février les données personnelles de 800.000 clients (noms, prénoms, adresses), ont été dérobées suite à
+            une intrusion informatique </p>
+        <a href="https://www.nextinpact.com/news/85647-orange-victime-dune-intrusion-informatique-donnees-dans-nature.htm">En
+            savoir plus ...</a>
+        <p> En avril les données personnelles (nom, prénoms, adresses, date de naissance, téléphone) de 1.2 millions de
+            clients sont dérobées</p>
+        <a href="https://www.nextinpact.com/news/87381-nouvelle-intrusion-chez-orange-donnees-personnelles-dans-nature.htm">En
+            savoir plus ...</a>
+    </div>
+
+    <div class="step" data-rel-x="900" data-rel-y="250" data-scale="0.9">
+        <h1> TV5 Monde Avril 2015</h1>
+        <p>Une cyberattaque contre la chaîne de télévision francophone TV5 Monde entraîne l'arrêt de la diffusion des
+            programmes,
+            et la publication de messages de soutien à l'État islamique sur ses réseaux sociaux.</p>
+        <p>Coût : 8 millions d'euros <br/>
+            Investissement pour lutter contre les cyber attaques : 10 millions<br/>
+            Activité au ralenti pendant de nombreux mois <br/></p>
+        <a href="https://fr.wikipedia.org/wiki/Cyberattaque_contre_TV5_Monde">En savoir plus ...</a>
+    </div>
+
+    <div class="step">
+        <h1>Hertz France Juillet 2017</h1>
+        <p>La CNIL inflige une amende de 40 000 € à Hertz <br>pour la présence d'une faille permettant
+            une violation des données<br> de plus de 40 000 clients de la société Hertz France. </p>
+        <p>En ajoutant à une url la chaîne cartcb_id= suivie d’un identifiant<br>
+            on pouvait récupérer les données personnelles de clients.</p>
+        <a href="https://www.nextinpact.com/news/104849-hertz-premiere-societe-sanctionnee-par-cnil-sous-lempire-loi-lemaire.htm">En
+            savoir plus ...</a>
+
+
+    </div>
+
+    <div class="step" data-rel-x="1150" data-rel-y="-500">
+        <h1>Yahoo 2013-2016</h1>
+        <p>Fuite de données pour plus d'un milliard de comptes</p>
+        <p>Plusieurs class actions dirigées contre Yahoo ont été validées comme étant recevable</p>
+        <p>Coût : provision de 350 millions réalisées</p>
+        <a href="https://www.nextinpact.com/news/105092-fuites-donnees-recours-collectifs-contre-yahoo-auront-bien-lieuaux-etats-unis.htm">En
+            savoir plus ...</a>
+    </div>
+
+    <div id="Ponemon" class="step" style="text-align: center" data-x="3500" data-y="4350" data-scale="2">
+        <h1>Quelques chiffres du rapport <a
+                href="https://securityintelligence.com/media/2017-ponemon-institute-cost-of-a-data-breach-study/"> The
+            2017 Ponemon Institute Cost of a Data Breach Study</a></h1>
+        <ul>
+            <li>Nombre moyen de violations de données en France en 2017 : 24 211</li>
+            <li>Coût moyen d’un incident en cybersécurité en France est de 4.19 millions de dollars</li>
+        </ul>
+        <img src="images/root-breache-min.png" width="714" height="476" class="right">
+
+
+    </div>
+
+    <div class="step" id="risques" data-x="6600" data-y="3850" data-scale="2">
+        <h1>Risques et impacts pour les entreprises</h1>
+        <img src="images/risques-impacts-min.png" alt="Impacts et risques pour les entreprises" width="802" height="534"
+             class="center"/>
+    </div>
+
+    <div class="step title" id="throttling" data-rotate="-90" data-x="9200" data-y="1800" data-scale="2">
+        <h1>Hacker est devenu accessible à tous</h1>
+    </div>
+
+    <div class="step" data-rel-x="1000" data-rel-y="500" data-rotate="-70">
+        <h1>www.shodan.io </h1>
+        <ul>
+            <li>Scanne tous les appareils exposés sur Internet</li>
+            <li>Les données récoltées sont accessibles en Open Data</li>
+            <li>Une API est accessible pour automatiser les traitements</li>
+        </ul>
+        <video controls src="videos/shodan.mp4" height="600" width="500">www.shodan.io</video>
+
+    </div>
+
+    <div class="step" data-rel-x="-300" data-rel-y="-1500" data-rotate="-130">
+        <h1> www.exploit-db.com : Les failles sont vites connues et vite exploitées</h1>
+        <video controls src="videos/exploit-DB.mp4" height="600" width="400">www.shodan.io</video>
+
+    </div>
+
+    <div id="chap-gestion" class="step" data-rel-x="-1200" data-rel-y="-900" data-rotate="-180">
+        <h1>Gérer la sécurité applicative sur vos projets</h1>
+    </div>
+
+    <div class="step" data-rel-x="0" data-rel-y="-900" data-rotate="-180">
+        <h1>La sécurité doit être intégrée dès le début d'un projet et à chaque étape</h1>
+        <img src="images/cycle-projet-secu-min.png" height="671" width="1027"/>
+    </div>
+
+    <div class="step" data-rel-x="0" data-rel-y="-900" data-rotate="-180" data-scale="2">
+        <h1>La toute première action à mener est la sensibilisation des équipes projet</h1>
+        <img src="images/formation.gif" height="312" width="312" class="right">
+    </div>
+
+    <div class="step" data-scale="1" data-rel-y="-1400" data-rotate="-180">
+        <h1>Conception </h1>
+        <p> Des exigences liées à la sécurité doivent être présents dans les spécifications et le
+            dossier technique d'architecture</p>
+        <p class="substep"><a
+                href="https://www.owasp.org/index.php/Category:OWASP_Application_Security_Verification_Standard_Project">
+            l'Application
+            Security Verification Standard 3.0.1</a> de L'OWASP permet de s'assurer que l'on adresse les principaux
+            risques</p>
+
+        <p class="substep">
+            <img src="images/ASVS-min.PNG" height="308" width="808">
+        </p>
+
+    </div>
+
+    <div class="step" style="text-align: center" data-rel-x="-4000" data-rel-y="-300" data-rotate="-280">
+        <h1> Développement </h1>
+        <p>Le maitre  mot est de se former, pour cela de nombreuses ressources sont disponibles sur le web</p>
+        <p class="substep"><a href="https://www.owasp.org/index.php/Category:Java#tab=Main">Guide de développement java
+            OWASP</a></p>
+        <p class="substep"><a href="http://www.oracle.com/technetwork/java/seccodeguide-139067.html"> Guide de
+            developpement Oracle</a></p>
+
+        <p class="substep"> Divers outils ou plugins peuvent favoriser cet apprentissage</p>
+        <p class="substep"><a href="http://find-sec-bugs.github.io/">Find Security Bugs</a></p>
+        <p class="substep"><a href="https://www.owasp.org/index.php/OWASP_Dependency_Check">OWASP Dependency Check</a>
+        </p>
+        <p class="substep"><a href="https://www.owasp.org/index.php/OWASP_SonarQube_Project">OWASP SonarQube Project</a>
+        </p>
+
+    </div>
+
+    <div class="step" style="text-align: center" data-rel-x="-4000" data-rel-y="-300" data-rotate="-280">
+        <h1>Recette </h1>
+        <p>Le plan de test doit contenir des cas de test liés à la sécurité applicative</p>
+        <p class="substep">
+        <a href="https://www.owasp.org/index.php/OWASP_Testing_Guide_v4_Table_of_Contents">L'OWASP Testing Guide </a>
+        explique avec de nombreux détails comment controler les principales
+            failles applicatives.</p>
+        <p class="substep"><img src="images/Testing-Guide.PNG" width="457" height="182"> </p>
+
+    </div>
+
+    <div class="step" style="text-align: center" data-rel-x="-4000" data-rel-y="-300" data-rotate="-280">
+        <h1>Exploitation</h1>
+        <p>La sécurité d'une application c'est également :</p>
+        La  configuration de l'application<br>
+        La configuration du système d'exploitation<br>
+        la configuration du réseau<br>
+
+  <p class="substep"> De nombreuses ressources sont disponibles pour connaitre les failles ou la mise à disposition de correctifs : <a href="http://www.cert.ssi.gouv.fr/" > CERT-FR </a>, <a href="https://cve.mitre.org">CVE</a></p>
+
+
+       <p class="substep">   La mise en place d'un <a href="https://en.wikipedia.org/wiki/Application_firewall"> firewall applicatif </a>(WAF) est très utile pour compléter l'arsenal défensif </p>
+
+    </div>
+
+    <div class="step" id="future" data-x="-30000" data-y="9000" data-z="8000" data-rotate-x="-95" data-rotate-y="-55"
+         data-transition-duration="5000">
+        <h1>Questions ? </h1>
+        <img src="images/Strip-Cdiscount-650-final-1.jpg">
+    </div>
+
+</div>
+
+<div id="impress-toolbar"></div>
+<div id="impress-help"></div>
+
+<script type="text/javascript" src="js/impress.js"></script>
+<script>impress().init();</script>
+</body>
+</html>
